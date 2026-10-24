@@ -3,17 +3,17 @@
 Tests integration between Stream A's forecasting engine
 and Stream C's Streamlit frontend.
 
-These tests verify:
-    1. Scenario-name translation.
-    2. Canonical output directory structure.
-    3. Forecast JSON contract.
-    4. Inventory-adjusted shipment targets.
-    5. Non-overwriting behavior.
-    6. Missing inventory rejection.
-    7. Demo artifact protection.
+Verifies:
+    - Scenario-name translation.
+    - Canonical scenario directories.
+    - Frontend forecast JSON contract.
+    - Inventory-adjusted shipment targets.
+    - Invalid inventory rejection.
+    - Protection against overwriting existing results.
+    - Protection of the frontend demo directory.
 
-All values are synthetic test fixtures.
-No model training or warehouse optimization is performed.
+Uses synthetic fixtures.
+No model training or optimization is performed.
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ from src.schemas import FORECAST_COLUMNS
 
 @pytest.fixture
 def sample_data(monkeypatch):
-    """Create 40 valid forecasts and corresponding opening inventory."""
+    """Create 40 valid forecasts and corresponding opening stock."""
 
     rows = []
 
@@ -66,17 +66,17 @@ def sample_data(monkeypatch):
 
             rows.append(row)
 
-    # Follow the official Stream A forecast contract.
+    # Follow the official forecasting column contract.
     forecast = pd.DataFrame(rows)[list(FORECAST_COLUMNS)]
 
-    # Synthetic opening-stock fixture.
+    # Create synthetic opening inventory.
     stock = forecast[
         ["store_id", "sku_id"]
     ].copy()
 
     stock["opening_units"] = 20
 
-    # Prevent tests from loading actual forecasting files.
+    # Prevent tests from loading production forecast files.
     monkeypatch.setattr(
         bridge,
         "load_forecast",
@@ -87,7 +87,7 @@ def sample_data(monkeypatch):
 
 
 # ============================================================
-# TEST 1 — SCENARIO NORMALIZATION
+# TEST 1 — SCENARIO TRANSLATION
 # ============================================================
 
 def test_scenario_translation():
@@ -100,7 +100,7 @@ def test_scenario_translation():
 
 
 # ============================================================
-# TEST 2 — CANONICAL SCENARIOS ARE ACCEPTED
+# TEST 2 — CANONICAL SCENARIO NAMES
 # ============================================================
 
 def test_canonical_scenario_names():
@@ -115,7 +115,7 @@ def test_canonical_scenario_names():
 
 
 # ============================================================
-# TEST 3 — REVERSE SCENARIO MAPPING
+# TEST 3 — REVERSE SCENARIO TRANSLATION
 # ============================================================
 
 def test_reverse_scenario_translation():
@@ -132,7 +132,7 @@ def test_reverse_scenario_translation():
 
 
 # ============================================================
-# TEST 4 — INVALID SCENARIO REJECTED
+# TEST 4 — INVALID SCENARIO REJECTION
 # ============================================================
 
 def test_invalid_scenario_rejected():
@@ -191,7 +191,6 @@ def test_frontend_forecast_fields(sample_data):
 
     assert required_fields.issubset(row.keys())
 
-    # Backend quantile names must be converted to lowercase.
     assert "P50" not in row
     assert "P90" not in row
 
@@ -212,7 +211,6 @@ def test_target_calculation(sample_data):
     assert row["opening_units"] == 20
 
     assert row["p50"] == pytest.approx(50.2)
-
     assert row["p90"] == pytest.approx(90.2)
 
     # ceil(50.2) - 20 = 31
@@ -223,7 +221,7 @@ def test_target_calculation(sample_data):
 
 
 # ============================================================
-# TEST 8 — CORRECT CANONICAL EXPORT DIRECTORY
+# TEST 8 — CANONICAL EXPORT DIRECTORY
 # ============================================================
 
 def test_export_to_correct_frontend_directory(
@@ -237,7 +235,6 @@ def test_export_to_correct_frontend_directory(
         results_dir=tmp_path,
     )
 
-    # Stream C requires canonical backend directory names.
     assert destination == (
         tmp_path / "scarce_supply" / "forecast.json"
     )
@@ -272,7 +269,7 @@ def test_normal_scenario_export(
         tmp_path / "normal" / "forecast.json"
     )
 
-    assert destination.exists()
+    assert destination.is_file()
 
 
 # ============================================================
@@ -294,11 +291,11 @@ def test_expiry_scenario_export(
         tmp_path / "expiry_trap" / "forecast.json"
     )
 
-    assert destination.exists()
+    assert destination.is_file()
 
 
 # ============================================================
-# TEST 11 — EXISTING RESULTS ARE NEVER OVERWRITTEN
+# TEST 11 — EXISTING RESULTS PROTECTED
 # ============================================================
 
 def test_existing_results_never_overwritten(
@@ -331,7 +328,7 @@ def test_existing_results_never_overwritten(
 
 
 # ============================================================
-# TEST 12 — MISSING OPENING STOCK REJECTED
+# TEST 12 — MISSING OPENING STOCK
 # ============================================================
 
 def test_missing_stock_rejected(sample_data):
@@ -339,6 +336,7 @@ def test_missing_stock_rejected(sample_data):
     incomplete = sample_data.iloc[:-1]
 
     with pytest.raises(ValueError):
+
         bridge.prepare_frontend_forecast(
             "normal",
             incomplete,
@@ -346,7 +344,7 @@ def test_missing_stock_rejected(sample_data):
 
 
 # ============================================================
-# TEST 13 — NEGATIVE OPENING STOCK REJECTED
+# TEST 13 — NEGATIVE OPENING STOCK
 # ============================================================
 
 def test_negative_stock_rejected(sample_data):
@@ -356,6 +354,7 @@ def test_negative_stock_rejected(sample_data):
     invalid.loc[0, "opening_units"] = -10
 
     with pytest.raises(ValueError):
+
         bridge.prepare_frontend_forecast(
             "normal",
             invalid,
@@ -363,16 +362,32 @@ def test_negative_stock_rejected(sample_data):
 
 
 # ============================================================
-# TEST 14 — FRACTIONAL OPENING STOCK REJECTED
+# TEST 14 — FRACTIONAL OPENING STOCK
+# FIXED FOR PANDAS 3.0.2
 # ============================================================
 
 def test_fractional_stock_rejected(sample_data):
+    """Fractional inventory must be rejected by our validator."""
 
     invalid = sample_data.copy()
 
+    # IMPORTANT:
+    # pandas 3.x does not allow setting 12.5
+    # directly into an int64 column.
+    #
+    # Convert the column to float first.
+    invalid["opening_units"] = (
+        invalid["opening_units"].astype(float)
+    )
+
+    # Introduce deliberately invalid inventory.
     invalid.loc[0, "opening_units"] = 12.5
 
-    with pytest.raises(ValueError):
+    # Now the actual application validator should reject it.
+    with pytest.raises(
+        ValueError,
+        match="whole units",
+    ):
         bridge.prepare_frontend_forecast(
             "normal",
             invalid,
@@ -380,7 +395,7 @@ def test_fractional_stock_rejected(sample_data):
 
 
 # ============================================================
-# TEST 15 — DUPLICATE OPENING STOCK REJECTED
+# TEST 15 — DUPLICATE OPENING STOCK
 # ============================================================
 
 def test_duplicate_stock_rejected(sample_data):
@@ -394,6 +409,7 @@ def test_duplicate_stock_rejected(sample_data):
     )
 
     with pytest.raises(ValueError):
+
         bridge.prepare_frontend_forecast(
             "normal",
             duplicate,
@@ -425,7 +441,7 @@ def test_demo_directory_protected(
 
 
 # ============================================================
-# TEST 17 — EXPORTED JSON CONTAINS VALID TARGETS
+# TEST 17 — EXPORTED JSON TARGETS
 # ============================================================
 
 def test_exported_json_targets(
@@ -453,7 +469,7 @@ def test_exported_json_targets(
 
 
 # ============================================================
-# TEST 18 — FULL QUANTILE ORDERING
+# TEST 18 — QUANTILE ORDERING
 # ============================================================
 
 def test_quantiles_remain_ordered(sample_data):
