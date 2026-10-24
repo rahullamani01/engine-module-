@@ -1,0 +1,56 @@
+{
+  "pinball": {
+    "scored_weeks": "41-52",
+    "selected": "ml_gbm",
+    "baseline_ma4": 4.9338975694444445,
+    "ml_gbm": 4.710929334109163
+  },
+  "calibration": [
+    {
+      "level": "P50",
+      "nominal": 0.5,
+      "observed": 0.5083333333333333,
+      "within_tolerance": true
+    },
+    {
+      "level": "P60",
+      "nominal": 0.6,
+      "observed": 0.6020833333333333,
+      "within_tolerance": true
+    },
+    {
+      "level": "P70",
+      "nominal": 0.7,
+      "observed": 0.6916666666666667,
+      "within_tolerance": true
+    },
+    {
+      "level": "P80",
+      "nominal": 0.8,
+      "observed": 0.8,
+      "within_tolerance": true
+    },
+    {
+      "level": "P90",
+      "nominal": 0.9,
+      "observed": 0.8729166666666667,
+      "within_tolerance": true
+    },
+    {
+      "level": "P95",
+      "nominal": 0.95,
+      "observed": 0.9333333333333332,
+      "within_tolerance": true
+    }
+  ],
+  "expiry_risk_units": 1298,
+  "expiry_risk_units_by_level": {
+    "P50": 1298,
+    "P60": 1246,
+    "P70": 1181,
+    "P80": 1089,
+    "P90": 928,
+    "P95": 805
+  },
+  "expiry_risk_definition": "Unshipped units with expiry <= planning Sunday + 7 days, including already expired; proxy only"
+}

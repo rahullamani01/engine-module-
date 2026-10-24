@@ -1,0 +1,73 @@
+{
+  "draws": 200,
+  "levels": [
+    {
+      "level": "P50",
+      "freight": 4027.0,
+      "realized_cost_mean": 8168.965,
+      "realized_cost_p90": 9133.9,
+      "fulfillment_mean": 0.8561327593455863,
+      "fulfillment_p10": 0.820970479067279,
+      "shipped_units": 1577,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 287.34
+    },
+    {
+      "level": "P60",
+      "freight": 4370.0,
+      "realized_cost_mean": 7979.465,
+      "realized_cost_p90": 8798.3,
+      "fulfillment_mean": 0.8880795648269882,
+      "fulfillment_p10": 0.8553799176732573,
+      "shipped_units": 1717,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 223.84
+    },
+    {
+      "level": "P70",
+      "freight": 4766.0,
+      "realized_cost_mean": 8033.765,
+      "realized_cost_p90": 8853.8,
+      "fulfillment_mean": 0.9157961045089651,
+      "fulfillment_p10": 0.883410055801996,
+      "shipped_units": 1879,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 168.66
+    },
+    {
+      "level": "P80",
+      "freight": 5288.0,
+      "realized_cost_mean": 8362.64,
+      "realized_cost_p90": 9087.5,
+      "fulfillment_mean": 0.9436274587205901,
+      "fulfillment_p10": 0.9149628383278968,
+      "shipped_units": 2092,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 113.185
+    },
+    {
+      "level": "P90",
+      "freight": 6196.0,
+      "realized_cost_mean": 9505.54,
+      "realized_cost_p90": 10126.9,
+      "fulfillment_mean": 0.9706021512549031,
+      "fulfillment_p10": 0.9470369108955013,
+      "shipped_units": 2440,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 59.245
+    },
+    {
+      "level": "P95",
+      "freight": 6967.0,
+      "realized_cost_mean": 10773.19,
+      "realized_cost_p90": 11204.5,
+      "fulfillment_mean": 0.9842786700673938,
+      "fulfillment_p10": 0.9666921646430463,
+      "shipped_units": 2743,
+      "unmet_units": 0,
+      "simulated_lost_sales_mean": 31.755
+    }
+  ],
+  "default_threshold": 0.9,
+  "recommended_level": "P80"
+}
