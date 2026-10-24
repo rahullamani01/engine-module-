@@ -11,7 +11,12 @@ from src.engine import load_forecast
 
 @pytest.fixture
 def forecast():
-    return load_forecast("normal")
+    # Use the frozen delivery, not ignored outputs from a previous local run.
+    return load_forecast(
+        "normal",
+        output_dir=config.PROJECT_ROOT
+        / "deliveries/normal-candidate/inputs/outputs",
+    )
 
 
 @pytest.fixture

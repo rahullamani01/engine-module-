@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "files": [
+    {
+      "name": "locations.csv",
+      "rows": 11,
+      "status": "ok",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "products.csv",
+      "rows": 5,
+      "status": "ok",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "opening_stock.csv",
+      "rows": 40,
+      "status": "ok",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "inventory_batches.csv",
+      "rows": 30,
+      "status": "ok",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "routes.csv",
+      "rows": 24,
+      "status": "ok",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "checks": [
+    {
+      "id": "supply",
+      "label": "Supply and references validate",
+      "passed": true,
+      "detail": "Strict row-level validation executed; CSV row numbers include header."
+    },
+    {
+      "id": "accepted_forecast",
+      "label": "Accepted forecast matches saved forecast and stock",
+      "passed": true,
+      "detail": "Existing adapter rerun without fitting; all six targets match."
+    },
+    {
+      "id": "checker",
+      "label": "Independent check passes",
+      "passed": true,
+      "detail": "All six levels and all three allocation methods checked."
+    },
+    {
+      "id": "lp_bound",
+      "label": "Continuous LP objective bound passes",
+      "passed": true,
+      "detail": "Compared against both feasible baselines at all six levels."
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

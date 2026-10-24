@@ -1,0 +1,134 @@
+{
+  "selected": "GB",
+  "ml_driven": true,
+  "reason": "GB mean pinball 4.7109 < MA4 4.9339 on weeks 41-52.",
+  "ml_error": null,
+  "holdout_metadata": {
+    "MA4": {
+      "method": "MA4",
+      "fit_weeks": [
+        5,
+        40
+      ],
+      "window": 4,
+      "quantiles": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        0.95
+      ],
+      "min_series_residuals": 20,
+      "n_series": 40,
+      "n_series_using_pooled_residuals": 0,
+      "residuals_per_series_min": 36,
+      "residuals_per_series_max": 36,
+      "residual_quantile_method": "numpy linear interpolation",
+      "eval_weeks": [
+        41,
+        52
+      ]
+    },
+    "GB": {
+      "method": "GB",
+      "fit_weeks": [
+        5,
+        40
+      ],
+      "quantiles": [
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        0.95
+      ],
+      "params": {
+        "n_estimators": 200,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "min_samples_leaf": 10,
+        "subsample": 0.8,
+        "random_state": 42
+      },
+      "n_series": 40,
+      "n_train_rows": 1440,
+      "features": [
+        "lag_1",
+        "lag_2",
+        "lag_3",
+        "lag_4",
+        "roll_mean",
+        "roll_std",
+        "store_S01",
+        "store_S02",
+        "store_S03",
+        "store_S04",
+        "store_S05",
+        "store_S06",
+        "store_S07",
+        "store_S08",
+        "sku_K01",
+        "sku_K02",
+        "sku_K03",
+        "sku_K04",
+        "sku_K05"
+      ],
+      "n_series_using_pooled_residuals": 0,
+      "eval_weeks": [
+        41,
+        52
+      ]
+    }
+  },
+  "final_fit_metadata": {
+    "method": "GB",
+    "fit_weeks": [
+      5,
+      52
+    ],
+    "quantiles": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "params": {
+      "n_estimators": 200,
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "min_samples_leaf": 10,
+      "subsample": 0.8,
+      "random_state": 42
+    },
+    "n_series": 40,
+    "n_train_rows": 1920,
+    "features": [
+      "lag_1",
+      "lag_2",
+      "lag_3",
+      "lag_4",
+      "roll_mean",
+      "roll_std",
+      "store_S01",
+      "store_S02",
+      "store_S03",
+      "store_S04",
+      "store_S05",
+      "store_S06",
+      "store_S07",
+      "store_S08",
+      "sku_K01",
+      "sku_K02",
+      "sku_K03",
+      "sku_K04",
+      "sku_K05"
+    ],
+    "n_series_using_pooled_residuals": 0
+  },
+  "seed": 42,
+  "synthetic_data": true
+}

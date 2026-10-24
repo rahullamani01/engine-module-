@@ -2,9 +2,9 @@
 
 **Team Byte Works · Triwizathon 2026 · Problem Statement 2**
 
-Stream A of the Adaptive Distribution Intelligence Engine: synthetic demand
-generation, validation, probabilistic forecasting, model selection, and
-inventory-adjusted targets for weekly FMCG replenishment.
+Adaptive Distribution Intelligence Engine backend: completed Stream A forecasting,
+plus a Stream B/D normal candidate with supply validation, checked allocation,
+allocation baselines and simulated demand evaluation.
 
 **All data is synthetic (seed 42). Results are not evidence of real-world
 performance. P90 is a planning quantile, not a 90% fulfillment guarantee.**
@@ -12,8 +12,9 @@ performance. P90 is a planning quantile, not a 90% fulfillment guarantee.**
 ## Current status
 
 **Stream A complete; normal-scenario A → C forecast integration accepted.**
-The complete distribution planner is **not finished**: shipment optimization,
-independent feasibility checking, and demand-draw evaluation remain separate work.
+The complete distribution planner is **not jointly accepted**: the normal B/D
+candidate is implemented and checked locally; frontend acceptance and full
+scarce/expiry exported runs remain pending.
 
 | Area | Status |
 |---|---|
@@ -24,8 +25,8 @@ independent feasibility checking, and demand-draw evaluation remain separate wor
 | Six quantile forecasts and inventory-adjusted targets | Implemented |
 | Artifact audit, JSON adapter and frontend bridge | Implemented |
 | Normal forecast displayed in DistriSense | Accepted by Stream C |
-| Warehouse supply, routes, optimizer and independent checker | Pending Stream B |
-| 200-draw Risk Dial and allocation comparisons | Pending Stream D / B |
+| Warehouse supply, routes, optimizer and independent checker | Implemented; normal candidate pending joint acceptance |
+| 200-draw Risk Dial and allocation comparisons | Implemented; normal candidate pending joint acceptance |
 
 ### Verification record
 
@@ -132,6 +133,62 @@ Transfer the validated JSON to the app repository's matching `engine_results/`
 directory, coordinating any replacement. Select **Engine results → Normal →
 Data & Validation** in Streamlit. Keep mock files in the app's separate `results/`
 directory untouched.
+
+## Normal allocation and evaluation candidate
+
+Stream B/D now has a separate saved-artifact pipeline. It **does not rerun
+forecasting**, overwrite accepted artifacts, or enable the frontend gate:
+
+```bash
+source .venv/bin/activate
+python -m pytest -q
+python -m src.planner --destination candidate_engine_results
+```
+
+Requires the existing `data/normal/{locations,products,opening_stock,hidden_truth}.csv`,
+saved normal forecasting outputs, and accepted `engine_results/normal/forecast.json`.
+The accepted forecast must exactly match the saved CSV plus opening stock.
+The destination scenario directory must not exist; use a different destination
+for another run, rather than deleting accepted or unrelated files.
+
+`candidate_engine_results/normal/` contains all seven UI-facing JSON files.
+`audit/` additionally contains original supply/stock, all 18 checked plans,
+all-level comparisons, the shared demand matrix, input/code hashes, dependency
+versions, backend HEAD and working-tree status. An uncommitted implementation
+is explicitly recorded as such, not attributed to HEAD alone.
+
+Supply assumptions are fixed in `src/supply.py::SUPPLY_ASSUMPTIONS`, independently
+of forecasts/hidden truth: 30 batches, seed 42, 160 units per normal batch,
+1,000-unit shared route capacities, seeded costs, and planted eligibility traps.
+Blocked counts use first-failure precedence: absent/inactive route → lead time
+→ shelf life. Validation rows are CSV line numbers including the header.
+Pro-rata processes batches in ID order, caps proportional shares by route capacity,
+and leaves unused shares at the warehouse; no redistribution is added. Greedy
+processes store/SKU IDs in order, then cost and batch ID. All methods floor
+shipments and recompute unmet/costs. Continuous LP objectives are retained separately.
+
+The evaluator alone reads hidden truth, after fixed plans have been checked.
+Negative-binomial dispersion is size k. Every method/level shares the same 200
+seed-42 draws. Zero-total-demand draws have fulfillment 1. The expiry proxy
+includes unshipped stock expiring on/before planning Sunday + 7 days (including
+already expired stock); it is not measured waste. The default recommendation
+uses a 0.90 P10 threshold, and may be null. UI-facing baseline comparisons remain
+P50 only; all six are available in `audit/all_level_comparisons.json`.
+
+First normal candidate, using the accepted forecast and pinned dependencies:
+
+- All six LP solves optimal; all 18 plans independently checked.
+- P50: 1,577 target/shipped units, zero unmet, ₹4,027 freight.
+- LP and greedy **tie** at P50 mean simulated cost ₹8,168.965; pro-rata ₹10,135.465.
+- P80 is cheapest among LP levels meeting P10 fulfillment ≥ 0.90
+  (P10 ≈ 0.91496; mean simulated cost ₹8,362.64).
+- Backend verification: **162 tests passed in 20.64 s**; this is not frontend
+  verification or joint acceptance, and these synthetic results imply no real savings.
+
+Remaining: Stream C must validate/render the candidate and jointly accept normal.
+No frontend activation index is written. Scarce/expiry supplies have feasibility,
+blocked-rule and baseline-bound tests, but their full exported runs are deliberately
+deferred until normal acceptance. Keep demo artifacts and accepted forecast intact.
 
 ## Remaining work and ownership
 
