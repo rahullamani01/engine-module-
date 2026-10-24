@@ -1,0 +1,8 @@
+# Versions verified in the development sandbox (Python 3.12). Python >= 3.11 required.
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
+# Not verified in the sandbox (no network) - confirm on your machine:
+pytest>=8.0
+# Added at G4: streamlit, plotly
