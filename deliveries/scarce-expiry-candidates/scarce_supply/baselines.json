@@ -1,0 +1,52 @@
+{
+  "levels": [
+    "P50"
+  ],
+  "methods": [
+    {
+      "id": "lp",
+      "name": "LP optimizer",
+      "planned_objective": 9640.0,
+      "continuous_objective": 9640.0,
+      "checker_passed": true,
+      "freight": 2344.0,
+      "realized_cost_mean": 12288.64,
+      "realized_cost_p90": 13515.7,
+      "fulfillment_mean": 0.5990078967593742,
+      "fulfillment_p10": 0.565651977622832,
+      "shipped_units": 969,
+      "unmet_units": 608,
+      "simulated_lost_sales_mean": 795.785
+    },
+    {
+      "id": "pro_rata",
+      "name": "Pro-rata",
+      "planned_objective": 11789.0,
+      "continuous_objective": 10940.396451514482,
+      "checker_passed": true,
+      "freight": 3281.0,
+      "realized_cost_mean": 13196.015,
+      "realized_cost_p90": 14730.5,
+      "fulfillment_mean": 0.5900975575260525,
+      "fulfillment_p10": 0.5539777814788492,
+      "shipped_units": 868,
+      "unmet_units": 709,
+      "simulated_lost_sales_mean": 814.01
+    },
+    {
+      "id": "greedy",
+      "name": "Cheapest eligible first",
+      "planned_objective": 10274.0,
+      "continuous_objective": 10274.0,
+      "checker_passed": true,
+      "freight": 2978.0,
+      "realized_cost_mean": 12963.665,
+      "realized_cost_p90": 14228.6,
+      "fulfillment_mean": 0.5976294768418068,
+      "fulfillment_p10": 0.5672337712758992,
+      "shipped_units": 969,
+      "unmet_units": 608,
+      "simulated_lost_sales_mean": 798.52
+    }
+  ]
+}

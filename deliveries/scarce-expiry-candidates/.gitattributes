@@ -1,0 +1,4 @@
+# Preserve frozen input bytes so provenance hashes survive checkout settings.
+inputs/** -text
+inputs/data/scarce_supply/opening_stock.csv whitespace=cr-at-eol
+inputs/data/expiry_trap/opening_stock.csv whitespace=cr-at-eol

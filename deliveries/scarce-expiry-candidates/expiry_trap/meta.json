@@ -1,0 +1,41 @@
+{
+  "scenario_id": "expiry_trap",
+  "scenario_name": "Expiry Trap",
+  "planning_week": 53,
+  "planning_date": "2026-01-05",
+  "seed": 42,
+  "forecaster_used": "ml_gbm",
+  "original_forecaster": "GB",
+  "forecaster_scores": {
+    "baseline_ma4": 4.9338975694444445,
+    "ml_gbm": 4.710929334109163
+  },
+  "solver_status": "optimal",
+  "solver_status_by_level": {
+    "P50": "optimal",
+    "P60": "optimal",
+    "P70": "optimal",
+    "P80": "optimal",
+    "P90": "optimal",
+    "P95": "optimal"
+  },
+  "solve_time_seconds": 0.018325882003409788,
+  "levels": [
+    "P50",
+    "P60",
+    "P70",
+    "P80",
+    "P90",
+    "P95"
+  ],
+  "default_level": "P50",
+  "network": {
+    "warehouses": 3,
+    "stores": 8,
+    "skus": 5
+  },
+  "latest_arrival_day": 2,
+  "min_shelf_life_days": 3,
+  "synthetic": true,
+  "joint_acceptance_pending": true
+}
