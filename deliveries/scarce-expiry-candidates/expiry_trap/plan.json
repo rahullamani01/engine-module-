@@ -1,0 +1,5183 @@
+{
+  "scenario_id": "expiry_trap",
+  "levels": {
+    "P50": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 30,
+          "freight": 90.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 50,
+          "freight": 150.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 38,
+          "freight": 152.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 37,
+          "freight": 111.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 26,
+          "freight": 78.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 20,
+          "freight": 80.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 54,
+          "freight": 162.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 24,
+          "freight": 72.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 31,
+          "freight": 124.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 23,
+          "freight": 69.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 62,
+          "freight": 186.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 19,
+          "freight": 57.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 19,
+          "freight": 76.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 16,
+          "freight": 48.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 29,
+          "freight": 58.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 56,
+          "freight": 224.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 55,
+          "freight": 220.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 42,
+          "freight": 42.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 63,
+          "freight": 189.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 34,
+          "freight": 68.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 28,
+          "freight": 112.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 34,
+          "freight": 102.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 38,
+          "freight": 38.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 19,
+          "freight": 76.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 63,
+          "freight": 63.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 75,
+          "freight": 225.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 78,
+          "freight": 156.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 40,
+          "freight": 160.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 58,
+          "freight": 116.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 53,
+          "freight": 53.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 39,
+          "freight": 156.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 33,
+          "freight": 132.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 55,
+          "freight": 165.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 22,
+          "freight": 44.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 25,
+          "freight": 100.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 24,
+          "freight": 24.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 10,
+          "freight": 40.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 29,
+          "freight": 87.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 29,
+          "shipped_units": 29,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 34,
+          "shipped_units": 34,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 78,
+          "shipped_units": 78,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 58,
+          "shipped_units": 58,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 22,
+          "shipped_units": 22,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 55,
+          "shipped_units": 55,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 39,
+          "shipped_units": 39,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 25,
+          "shipped_units": 25,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 63,
+          "shipped_units": 63,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 53,
+          "shipped_units": 53,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 24,
+          "shipped_units": 24,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 30,
+          "shipped_units": 30,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 26,
+          "shipped_units": 26,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 24,
+          "shipped_units": 24,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 23,
+          "shipped_units": 23,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 19,
+          "shipped_units": 19,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 56,
+          "shipped_units": 56,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 28,
+          "shipped_units": 28,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 33,
+          "shipped_units": 33,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 10,
+          "shipped_units": 10,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 20,
+          "shipped_units": 20,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 19,
+          "shipped_units": 19,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 63,
+          "shipped_units": 63,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 34,
+          "shipped_units": 34,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 75,
+          "shipped_units": 75,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 55,
+          "shipped_units": 55,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 29,
+          "shipped_units": 29,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 50,
+          "shipped_units": 50,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 54,
+          "shipped_units": 54,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 62,
+          "shipped_units": 62,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 16,
+          "shipped_units": 16,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 1577,
+        "shipped_units": 1577,
+        "unmet_units": 0,
+        "freight": 4609.0,
+        "shipments": 41
+      },
+      "planned_objective": 4609.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.0031267369995475747,
+        "continuous_objective": 4609.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    "P60": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 31,
+          "freight": 93.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 55,
+          "freight": 165.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 38,
+          "freight": 114.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 29,
+          "freight": 87.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 22,
+          "freight": 88.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 59,
+          "freight": 177.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 27,
+          "freight": 81.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 18,
+          "freight": 108.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 35,
+          "freight": 140.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 25,
+          "freight": 75.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 46,
+          "freight": 184.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 66,
+          "freight": 198.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 21,
+          "freight": 63.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 20,
+          "freight": 80.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 18,
+          "freight": 54.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 33,
+          "freight": 66.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 13,
+          "freight": 13.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 57,
+          "freight": 228.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 59,
+          "freight": 236.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 36,
+          "freight": 36.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 65,
+          "freight": 195.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 37,
+          "freight": 74.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 31,
+          "freight": 124.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 38,
+          "freight": 114.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 46,
+          "freight": 184.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 42,
+          "freight": 42.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 15,
+          "freight": 60.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 68,
+          "freight": 68.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 77,
+          "freight": 231.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 83,
+          "freight": 166.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 48,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 29,
+          "freight": 116.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 62,
+          "freight": 124.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 60,
+          "freight": 60.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 45,
+          "freight": 180.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 37,
+          "freight": 148.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 58,
+          "freight": 174.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 25,
+          "freight": 50.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 28,
+          "freight": 112.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 30,
+          "freight": 30.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 11,
+          "freight": 44.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 32,
+          "freight": 96.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 33,
+          "shipped_units": 33,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 83,
+          "shipped_units": 83,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 62,
+          "shipped_units": 62,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 25,
+          "shipped_units": 25,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 46,
+          "shipped_units": 46,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 63,
+          "shipped_units": 63,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 45,
+          "shipped_units": 45,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 28,
+          "shipped_units": 28,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 49,
+          "shipped_units": 49,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 68,
+          "shipped_units": 68,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 60,
+          "shipped_units": 60,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 30,
+          "shipped_units": 30,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 29,
+          "shipped_units": 29,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 27,
+          "shipped_units": 27,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 25,
+          "shipped_units": 25,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 21,
+          "shipped_units": 21,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 57,
+          "shipped_units": 57,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 47,
+          "shipped_units": 47,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 11,
+          "shipped_units": 11,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 22,
+          "shipped_units": 22,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 46,
+          "shipped_units": 46,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 20,
+          "shipped_units": 20,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 65,
+          "shipped_units": 65,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 77,
+          "shipped_units": 77,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 58,
+          "shipped_units": 58,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 32,
+          "shipped_units": 32,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 55,
+          "shipped_units": 55,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 18,
+          "shipped_units": 18,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 1717,
+        "shipped_units": 1717,
+        "unmet_units": 0,
+        "freight": 5038.0,
+        "shipments": 43
+      },
+      "planned_objective": 5038.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.0027550599988899194,
+        "continuous_objective": 5038.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    "P70": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 48,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 59,
+          "freight": 177.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 32,
+          "freight": 96.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 44,
+          "freight": 132.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 31,
+          "freight": 93.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 25,
+          "freight": 100.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 14,
+          "freight": 42.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 21,
+          "freight": 63.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 38,
+          "freight": 228.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 38,
+          "freight": 152.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 63,
+          "freight": 189.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 35,
+          "freight": 105.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-26",
+          "units": 71,
+          "freight": 213.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 51,
+          "freight": 204.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 24,
+          "freight": 72.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 20,
+          "freight": 80.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 21,
+          "freight": 63.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 37,
+          "freight": 74.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 61,
+          "freight": 244.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 3,
+          "freight": 3.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 59,
+          "freight": 236.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 49,
+          "freight": 49.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 69,
+          "freight": 207.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-15",
+          "units": 27,
+          "freight": 27.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 35,
+          "freight": 140.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 42,
+          "freight": 84.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 49,
+          "freight": 196.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 21,
+          "freight": 21.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 48,
+          "freight": 144.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 86,
+          "freight": 172.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 68,
+          "freight": 272.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 6,
+          "freight": 24.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 74,
+          "freight": 74.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 7,
+          "freight": 28.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 79,
+          "freight": 237.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 67,
+          "freight": 134.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 52,
+          "freight": 208.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 41,
+          "freight": 41.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 26,
+          "freight": 26.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 39,
+          "freight": 156.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 64,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W03-K05-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 13,
+          "freight": 52.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 26,
+          "freight": 52.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 30,
+          "freight": 120.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 31,
+          "freight": 31.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 35,
+          "freight": 105.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 86,
+          "shipped_units": 86,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 67,
+          "shipped_units": 67,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 26,
+          "shipped_units": 26,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 61,
+          "shipped_units": 61,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 49,
+          "shipped_units": 49,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 68,
+          "shipped_units": 68,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 52,
+          "shipped_units": 52,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 30,
+          "shipped_units": 30,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 52,
+          "shipped_units": 52,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 48,
+          "shipped_units": 48,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 74,
+          "shipped_units": 74,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 67,
+          "shipped_units": 67,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 32,
+          "shipped_units": 32,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 24,
+          "shipped_units": 24,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 51,
+          "shipped_units": 51,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 39,
+          "shipped_units": 39,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 13,
+          "shipped_units": 13,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 48,
+          "shipped_units": 48,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 25,
+          "shipped_units": 25,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 51,
+          "shipped_units": 51,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 20,
+          "shipped_units": 20,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 69,
+          "shipped_units": 69,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 48,
+          "shipped_units": 48,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 79,
+          "shipped_units": 79,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 64,
+          "shipped_units": 64,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 44,
+          "shipped_units": 44,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 63,
+          "shipped_units": 63,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 71,
+          "shipped_units": 71,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 21,
+          "shipped_units": 21,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 1879,
+        "shipped_units": 1879,
+        "unmet_units": 0,
+        "freight": 5550.0,
+        "shipments": 46
+      },
+      "planned_objective": 5550.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.0031748570036143064,
+        "continuous_objective": 5550.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    "P80": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 53,
+          "freight": 212.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 64,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 38,
+          "freight": 114.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 52,
+          "freight": 156.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 31,
+          "freight": 93.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 28,
+          "freight": 112.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 19,
+          "freight": 57.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 44,
+          "freight": 132.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 51,
+          "freight": 306.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 41,
+          "freight": 164.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 68,
+          "freight": 204.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 43,
+          "freight": 129.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-26",
+          "units": 77,
+          "freight": 231.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 56,
+          "freight": 224.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 27,
+          "freight": 81.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 23,
+          "freight": 92.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 24,
+          "freight": 72.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 28,
+          "freight": 56.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 66,
+          "freight": 264.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 66,
+          "freight": 264.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 18,
+          "freight": 36.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 60,
+          "freight": 60.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 74,
+          "freight": 222.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 2,
+          "freight": 4.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-15",
+          "units": 53,
+          "freight": 53.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 38,
+          "freight": 152.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 48,
+          "freight": 96.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 57,
+          "freight": 228.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 55,
+          "freight": 165.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 87,
+          "freight": 174.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 73,
+          "freight": 292.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 3,
+          "freight": 6.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 61,
+          "freight": 61.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 7,
+          "freight": 28.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 89,
+          "freight": 267.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 72,
+          "freight": 144.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 57,
+          "freight": 228.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 31,
+          "freight": 31.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 40,
+          "freight": 40.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 45,
+          "freight": 180.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 67,
+          "freight": 201.0
+        },
+        {
+          "batch_id": "W03-K05-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 15,
+          "freight": 60.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 33,
+          "freight": 66.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 33,
+          "freight": 132.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 34,
+          "freight": 34.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 41,
+          "freight": 123.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 46,
+          "shipped_units": 46,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 50,
+          "shipped_units": 50,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 90,
+          "shipped_units": 90,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 72,
+          "shipped_units": 72,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 33,
+          "shipped_units": 33,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 57,
+          "shipped_units": 57,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 73,
+          "shipped_units": 73,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 57,
+          "shipped_units": 57,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 33,
+          "shipped_units": 33,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 60,
+          "shipped_units": 60,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 53,
+          "shipped_units": 53,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 80,
+          "shipped_units": 80,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 71,
+          "shipped_units": 71,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 34,
+          "shipped_units": 34,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 31,
+          "shipped_units": 31,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 44,
+          "shipped_units": 44,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 43,
+          "shipped_units": 43,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 27,
+          "shipped_units": 27,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 58,
+          "shipped_units": 58,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 45,
+          "shipped_units": 45,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 15,
+          "shipped_units": 15,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 53,
+          "shipped_units": 53,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 28,
+          "shipped_units": 28,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 41,
+          "shipped_units": 41,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 56,
+          "shipped_units": 56,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 23,
+          "shipped_units": 23,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 74,
+          "shipped_units": 74,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 55,
+          "shipped_units": 55,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 89,
+          "shipped_units": 89,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 67,
+          "shipped_units": 67,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 41,
+          "shipped_units": 41,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 64,
+          "shipped_units": 64,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 52,
+          "shipped_units": 52,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 68,
+          "shipped_units": 68,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 77,
+          "shipped_units": 77,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 24,
+          "shipped_units": 24,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 2092,
+        "shipped_units": 2092,
+        "unmet_units": 0,
+        "freight": 6238.0,
+        "shipments": 46
+      },
+      "planned_objective": 6238.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.0029033929968136363,
+        "continuous_objective": 6238.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    "P90": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 43,
+          "freight": 129.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 40,
+          "freight": 160.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 77,
+          "freight": 231.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 41,
+          "freight": 123.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 32,
+          "freight": 128.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 59,
+          "freight": 177.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 38,
+          "freight": 114.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 34,
+          "freight": 136.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 86,
+          "freight": 258.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 51,
+          "freight": 153.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 4,
+          "freight": 16.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 32,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 48,
+          "freight": 192.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 80,
+          "freight": 240.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 49,
+          "freight": 147.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-26",
+          "units": 89,
+          "freight": 267.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 26,
+          "freight": 156.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 71,
+          "freight": 284.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 37,
+          "freight": 111.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 27,
+          "freight": 108.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 28,
+          "freight": 84.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 4,
+          "freight": 8.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 79,
+          "freight": 316.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 77,
+          "freight": 308.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 54,
+          "freight": 108.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-13",
+          "units": 24,
+          "freight": 24.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 82,
+          "freight": 246.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 40,
+          "freight": 80.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-15",
+          "units": 66,
+          "freight": 66.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 20,
+          "freight": 40.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 70,
+          "freight": 280.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 70,
+          "freight": 210.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 76,
+          "freight": 152.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 84,
+          "freight": 336.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 26,
+          "freight": 52.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 92,
+          "freight": 276.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 75,
+          "freight": 150.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 62,
+          "freight": 248.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 23,
+          "freight": 23.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 61,
+          "freight": 61.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 24,
+          "freight": 96.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 75,
+          "freight": 225.0
+        },
+        {
+          "batch_id": "W03-K05-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 20,
+          "freight": 80.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 43,
+          "freight": 86.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 38,
+          "freight": 152.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 37,
+          "freight": 37.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 42,
+          "freight": 126.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 58,
+          "shipped_units": 58,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 60,
+          "shipped_units": 60,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 102,
+          "shipped_units": 102,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 75,
+          "shipped_units": 75,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 43,
+          "shipped_units": 43,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 79,
+          "shipped_units": 79,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 70,
+          "shipped_units": 70,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 84,
+          "shipped_units": 84,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 62,
+          "shipped_units": 62,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 67,
+          "shipped_units": 67,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 86,
+          "shipped_units": 86,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 84,
+          "shipped_units": 84,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 41,
+          "shipped_units": 41,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 38,
+          "shipped_units": 38,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 51,
+          "shipped_units": 51,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 49,
+          "shipped_units": 49,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 77,
+          "shipped_units": 77,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 74,
+          "shipped_units": 74,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 50,
+          "shipped_units": 50,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 20,
+          "shipped_units": 20,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 72,
+          "shipped_units": 72,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 34,
+          "shipped_units": 34,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 52,
+          "shipped_units": 52,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 71,
+          "shipped_units": 71,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 27,
+          "shipped_units": 27,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 82,
+          "shipped_units": 82,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 70,
+          "shipped_units": 70,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 92,
+          "shipped_units": 92,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 75,
+          "shipped_units": 75,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 77,
+          "shipped_units": 77,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 80,
+          "shipped_units": 80,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 89,
+          "shipped_units": 89,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 28,
+          "shipped_units": 28,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 2440,
+        "shipped_units": 2440,
+        "unmet_units": 0,
+        "freight": 7528.0,
+        "shipments": 49
+      },
+      "planned_objective": 7528.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.0033586870049475692,
+        "continuous_objective": 7528.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    "P95": {
+      "shipments": [
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 75,
+          "freight": 225.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 23,
+          "freight": 138.0
+        },
+        {
+          "batch_id": "W02-K01-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 6,
+          "expiry_date": "2026-01-12",
+          "units": 62,
+          "freight": 186.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 46,
+          "freight": 138.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 78,
+          "freight": 312.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 5.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 1,
+          "freight": 5.0
+        },
+        {
+          "batch_id": "W02-K01-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-13",
+          "units": 27,
+          "freight": 81.0
+        },
+        {
+          "batch_id": "W02-K02-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-15",
+          "units": 63,
+          "freight": 189.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 20,
+          "freight": 60.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 43,
+          "freight": 129.0
+        },
+        {
+          "batch_id": "W02-K02-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-16",
+          "units": 37,
+          "freight": 148.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S03",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 90,
+          "freight": 270.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 66,
+          "freight": 198.0
+        },
+        {
+          "batch_id": "W02-K03-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-19",
+          "units": 4,
+          "freight": 16.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 13,
+          "expiry_date": "2026-01-20",
+          "units": 19,
+          "freight": 114.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 55,
+          "freight": 220.0
+        },
+        {
+          "batch_id": "W02-K03-B2",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-20",
+          "units": 86,
+          "freight": 258.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 53,
+          "freight": 159.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 5.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-26",
+          "units": 7,
+          "freight": 35.0
+        },
+        {
+          "batch_id": "W02-K04-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-26",
+          "units": 100,
+          "freight": 300.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S05",
+          "sku_id": "K04",
+          "unit_cost": 6.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 57,
+          "freight": 342.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 78,
+          "freight": 312.0
+        },
+        {
+          "batch_id": "W02-K04-B2",
+          "warehouse_id": "W02",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 5.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-27",
+          "units": 5,
+          "freight": 25.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S04",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 45,
+          "freight": 135.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S06",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 36,
+          "freight": 144.0
+        },
+        {
+          "batch_id": "W02-K05-B1",
+          "warehouse_id": "W02",
+          "store_id": "S08",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 1,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-04",
+          "units": 35,
+          "freight": 105.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 5,
+          "expiry_date": "2026-01-12",
+          "units": 89,
+          "freight": 356.0
+        },
+        {
+          "batch_id": "W03-K01-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K01",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 7,
+          "expiry_date": "2026-01-12",
+          "units": 71,
+          "freight": 284.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K01",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 66,
+          "freight": 132.0
+        },
+        {
+          "batch_id": "W03-K01-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K01",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-13",
+          "units": 94,
+          "freight": 282.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K02",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 65,
+          "freight": 130.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K02",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 8,
+          "expiry_date": "2026-01-15",
+          "units": 51,
+          "freight": 51.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 42,
+          "freight": 168.0
+        },
+        {
+          "batch_id": "W03-K02-B1",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 10,
+          "expiry_date": "2026-01-15",
+          "units": 2,
+          "freight": 6.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K02",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 9,
+          "expiry_date": "2026-01-16",
+          "units": 83,
+          "freight": 332.0
+        },
+        {
+          "batch_id": "W03-K02-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K02",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 11,
+          "expiry_date": "2026-01-16",
+          "units": 77,
+          "freight": 231.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 14,
+          "expiry_date": "2026-01-19",
+          "units": 117,
+          "freight": 234.0
+        },
+        {
+          "batch_id": "W03-K03-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 12,
+          "expiry_date": "2026-01-19",
+          "units": 43,
+          "freight": 172.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K03",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 1,
+          "freight": 2.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K03",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 61,
+          "freight": 244.0
+        },
+        {
+          "batch_id": "W03-K03-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K03",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 15,
+          "expiry_date": "2026-01-20",
+          "units": 98,
+          "freight": 294.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K04",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 21,
+          "expiry_date": "2026-01-26",
+          "units": 86,
+          "freight": 172.0
+        },
+        {
+          "batch_id": "W03-K04-B1",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K04",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 19,
+          "expiry_date": "2026-01-26",
+          "units": 74,
+          "freight": 296.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K04",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 20,
+          "expiry_date": "2026-01-27",
+          "units": 92,
+          "freight": 92.0
+        },
+        {
+          "batch_id": "W03-K04-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K04",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 22,
+          "expiry_date": "2026-01-27",
+          "units": 68,
+          "freight": 204.0
+        },
+        {
+          "batch_id": "W03-K05-B1",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 21,
+          "freight": 42.0
+        },
+        {
+          "batch_id": "W03-K05-B1",
+          "warehouse_id": "W03",
+          "store_id": "S05",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 30,
+          "expiry_date": "2026-02-04",
+          "units": 24,
+          "freight": 96.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S01",
+          "sku_id": "K05",
+          "unit_cost": 2.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 28,
+          "freight": 56.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S02",
+          "sku_id": "K05",
+          "unit_cost": 4.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 45,
+          "freight": 180.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S03",
+          "sku_id": "K05",
+          "unit_cost": 1.0,
+          "arrival_day": 2,
+          "shelf_life_on_arrival": 29,
+          "expiry_date": "2026-02-05",
+          "units": 44,
+          "freight": 44.0
+        },
+        {
+          "batch_id": "W03-K05-B2",
+          "warehouse_id": "W03",
+          "store_id": "S07",
+          "sku_id": "K05",
+          "unit_cost": 3.0,
+          "arrival_day": 0,
+          "shelf_life_on_arrival": 31,
+          "expiry_date": "2026-02-05",
+          "units": 43,
+          "freight": 129.0
+        }
+      ],
+      "unmet": [
+        {
+          "store_id": "S01",
+          "sku_id": "K01",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K02",
+          "target_units": 65,
+          "shipped_units": 65,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K03",
+          "target_units": 118,
+          "shipped_units": 118,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K04",
+          "target_units": 86,
+          "shipped_units": 86,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S01",
+          "sku_id": "K05",
+          "target_units": 49,
+          "shipped_units": 49,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K01",
+          "target_units": 89,
+          "shipped_units": 89,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K02",
+          "target_units": 83,
+          "shipped_units": 83,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K03",
+          "target_units": 90,
+          "shipped_units": 43,
+          "unmet_units": 47
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K04",
+          "target_units": 74,
+          "shipped_units": 74,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S02",
+          "sku_id": "K05",
+          "target_units": 45,
+          "shipped_units": 45,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K01",
+          "target_units": 75,
+          "shipped_units": 75,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K02",
+          "target_units": 71,
+          "shipped_units": 71,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K03",
+          "target_units": 90,
+          "shipped_units": 90,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K04",
+          "target_units": 92,
+          "shipped_units": 92,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S03",
+          "sku_id": "K05",
+          "target_units": 44,
+          "shipped_units": 44,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K01",
+          "target_units": 46,
+          "shipped_units": 46,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K02",
+          "target_units": 43,
+          "shipped_units": 43,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K03",
+          "target_units": 66,
+          "shipped_units": 66,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K04",
+          "target_units": 53,
+          "shipped_units": 53,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S04",
+          "sku_id": "K05",
+          "target_units": 45,
+          "shipped_units": 45,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K01",
+          "target_units": 94,
+          "shipped_units": 94,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K02",
+          "target_units": 42,
+          "shipped_units": 42,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K03",
+          "target_units": 80,
+          "shipped_units": 80,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K04",
+          "target_units": 57,
+          "shipped_units": 57,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S05",
+          "sku_id": "K05",
+          "target_units": 24,
+          "shipped_units": 24,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K01",
+          "target_units": 78,
+          "shipped_units": 78,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K02",
+          "target_units": 37,
+          "shipped_units": 37,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K03",
+          "target_units": 59,
+          "shipped_units": 59,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K04",
+          "target_units": 78,
+          "shipped_units": 78,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S06",
+          "sku_id": "K05",
+          "target_units": 36,
+          "shipped_units": 36,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K01",
+          "target_units": 95,
+          "shipped_units": 95,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K02",
+          "target_units": 79,
+          "shipped_units": 79,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K03",
+          "target_units": 98,
+          "shipped_units": 98,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K04",
+          "target_units": 80,
+          "shipped_units": 80,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S07",
+          "sku_id": "K05",
+          "target_units": 43,
+          "shipped_units": 43,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K01",
+          "target_units": 89,
+          "shipped_units": 89,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K02",
+          "target_units": 63,
+          "shipped_units": 63,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K03",
+          "target_units": 86,
+          "shipped_units": 86,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K04",
+          "target_units": 100,
+          "shipped_units": 100,
+          "unmet_units": 0
+        },
+        {
+          "store_id": "S08",
+          "sku_id": "K05",
+          "target_units": 35,
+          "shipped_units": 35,
+          "unmet_units": 0
+        }
+      ],
+      "blocked": {
+        "route": 10,
+        "lead_time": 10,
+        "shelf_life": 70
+      },
+      "totals": {
+        "target_units": 2743,
+        "shipped_units": 2696,
+        "unmet_units": 47,
+        "freight": 8473.0,
+        "shipments": 51
+      },
+      "planned_objective": 9037.0,
+      "solver": {
+        "status": "optimal",
+        "raw_status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "solve_time_seconds": 0.003007147999596782,
+        "continuous_objective": 9037.0
+      },
+      "whole_unit_optimality_proven": false,
+      "checker": {
+        "passed": true,
+        "violations": []
+      }
+    }
+  }
+}

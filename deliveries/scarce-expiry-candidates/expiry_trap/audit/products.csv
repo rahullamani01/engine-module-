@@ -1,0 +1,6 @@
+sku_id,shelf_life_days,lost_sale_cost,overstock_cost
+K01,7,12.0,3.0
+K02,10,12.0,3.0
+K03,14,12.0,3.0
+K04,21,12.0,3.0
+K05,30,12.0,3.0

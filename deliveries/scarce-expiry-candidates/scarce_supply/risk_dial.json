@@ -1,0 +1,73 @@
+{
+  "draws": 200,
+  "levels": [
+    {
+      "level": "P50",
+      "freight": 2344.0,
+      "realized_cost_mean": 12288.64,
+      "realized_cost_p90": 13515.7,
+      "fulfillment_mean": 0.5990078967593742,
+      "fulfillment_p10": 0.565651977622832,
+      "shipped_units": 969,
+      "unmet_units": 608,
+      "simulated_lost_sales_mean": 795.785
+    },
+    {
+      "level": "P60",
+      "freight": 2388.0,
+      "realized_cost_mean": 12581.79,
+      "realized_cost_p90": 13845.9,
+      "fulfillment_mean": 0.5926584409237673,
+      "fulfillment_p10": 0.5608615299432129,
+      "shipped_units": 990,
+      "unmet_units": 727,
+      "simulated_lost_sales_mean": 808.195
+    },
+    {
+      "level": "P70",
+      "freight": 2401.0,
+      "realized_cost_mean": 12901.99,
+      "realized_cost_p90": 14192.2,
+      "fulfillment_mean": 0.5838136307484789,
+      "fulfillment_p10": 0.5537744800980126,
+      "shipped_units": 1005,
+      "unmet_units": 874,
+      "simulated_lost_sales_mean": 825.675
+    },
+    {
+      "level": "P80",
+      "freight": 2389.0,
+      "realized_cost_mean": 13436.065,
+      "realized_cost_p90": 14787.1,
+      "fulfillment_mean": 0.566366236466493,
+      "fulfillment_p10": 0.5372080799712379,
+      "shipped_units": 1015,
+      "unmet_units": 1077,
+      "simulated_lost_sales_mean": 860.08
+    },
+    {
+      "level": "P90",
+      "freight": 2343.0,
+      "realized_cost_mean": 14231.34,
+      "realized_cost_p90": 15580.5,
+      "fulfillment_mean": 0.5379944070684572,
+      "fulfillment_p10": 0.5077999136132115,
+      "shipped_units": 1015,
+      "unmet_units": 1425,
+      "simulated_lost_sales_mean": 916.165
+    },
+    {
+      "level": "P95",
+      "freight": 2325.0,
+      "realized_cost_mean": 14982.615,
+      "realized_cost_p90": 16327.5,
+      "fulfillment_mean": 0.5120063529905129,
+      "fulfillment_p10": 0.48049278594272216,
+      "shipped_units": 1015,
+      "unmet_units": 1728,
+      "simulated_lost_sales_mean": 967.45
+    }
+  ],
+  "default_threshold": 0.9,
+  "recommended_level": null
+}

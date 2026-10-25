@@ -1,13 +1,14 @@
-"""Build an unactivated normal candidate from accepted, saved Stream A outputs.
+"""Build an unactivated scenario candidate from accepted, saved Stream A outputs.
 
 Never runs forecasting, replaces accepted artifacts, or writes a frontend index.
-Usage: python -m src.planner --destination candidate_engine_results
+Usage: python -m src.planner --destination candidate_engine_results --scenario scarce_supply
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import platform
 import subprocess
@@ -30,12 +31,40 @@ def _save(path, payload):
         json.dump(payload, f, indent=2, allow_nan=False)
 
 
-def build_candidate(destination, data_dir=None, output_dir=None, accepted_forecast=None):
-    """Normal only until joint acceptance; other supply scenarios remain test cases."""
-    source = Path(data_dir) if data_dir is not None else config.DATA_DIR / "normal"
-    outputs = Path(output_dir) if output_dir is not None else config.OUTPUT_DIR / "normal"
-    forecast_path = Path(accepted_forecast) if accepted_forecast is not None else config.PROJECT_ROOT / "engine_results/normal/forecast.json"
-    destination = Path(destination) / "normal"
+def _forecasts_agree(saved, recomputed):
+    """Compare semantics, not float repr: CSV parsing can move a value by 1 ulp."""
+    if saved.keys() != recomputed.keys():
+        return False
+    left, right = saved["rows"], recomputed["rows"]
+    if len(left) != len(right):
+        return False
+    for a, b in zip(left, right):
+        if a.keys() != b.keys():
+            return False
+        if (a["store_id"], a["sku_id"], a["opening_units"]) != (
+                b["store_id"], b["sku_id"], b["opening_units"]):
+            return False
+        for level in config.QUANTILE_COLUMNS:
+            key = level.lower()
+            if not math.isclose(a[key], b[key], rel_tol=1e-12, abs_tol=1e-9):
+                return False
+            if a[f"target_{key}"] != b[f"target_{key}"]:
+                return False
+    return True
+
+
+SCENARIO_NAMES = {"normal": "Normal", "scarce_supply": "Scarce Supply", "expiry_trap": "Expiry Trap"}
+
+
+def build_candidate(destination, data_dir=None, output_dir=None, accepted_forecast=None,
+                    scenario="normal"):
+    """Build one scenario. Supply differs; accepted forecast and stock are shared."""
+    if scenario not in config.SCENARIOS:
+        raise ValueError(f"Unknown scenario: {scenario}")
+    source = Path(data_dir) if data_dir is not None else config.DATA_DIR / scenario
+    outputs = Path(output_dir) if output_dir is not None else config.OUTPUT_DIR / scenario
+    forecast_path = Path(accepted_forecast) if accepted_forecast is not None else config.PROJECT_ROOT / f"engine_results/{scenario}/forecast.json"
+    destination = Path(destination) / scenario
     if destination.exists():
         raise FileExistsError(f"Candidate directory already exists: {destination}")
     source_paths = [source / name for name in ("locations.csv", "products.csv", "opening_stock.csv")]
@@ -46,9 +75,9 @@ def build_candidate(destination, data_dir=None, output_dir=None, accepted_foreca
     # The existing adapter validates forecast quantiles, planning week, pairs,
     # opening stock and every target. Reject dependency/artifact drift.
     recomputed = build_forecast_json(pd.read_csv(outputs / "planning_forecast.csv"), stock)
-    if forecast != recomputed:
+    if not _forecasts_agree(forecast, recomputed):
         raise ValueError("Saved forecasts/stock disagree with accepted forecast; coordinate rerun, do not overwrite")
-    supply = generate_supply(locations, products, stock, "normal")
+    supply = generate_supply(locations, products, stock, scenario)
     report = validate_supply(supply, locations, products)
     report.raise_if_invalid()
     comparison = pd.read_csv(outputs / "model_comparison.csv")
@@ -104,7 +133,7 @@ def build_candidate(destination, data_dir=None, output_dir=None, accepted_foreca
                                    continuous_objective=p["solver"]["continuous_objective"],
                                    checker_passed=p["checker"]["passed"], **metrics[m]) for m, p in methods.items()]
     statuses = {level: p["solver"]["status"] for level, p in plans.items()}
-    meta = dict(scenario_id="normal", scenario_name="Normal", planning_week=config.PLANNING_WEEK,
+    meta = dict(scenario_id=scenario, scenario_name=SCENARIO_NAMES[scenario], planning_week=config.PLANNING_WEEK,
                 planning_date=planning_date().isoformat(), seed=config.SEED,
                 forecaster_used=mapping[selected], original_forecaster=selected, forecaster_scores=scores,
                 solver_status="optimal" if all(s == "optimal" for s in statuses.values()) else "error",
@@ -135,7 +164,7 @@ def build_candidate(destination, data_dir=None, output_dir=None, accepted_foreca
                                   zero_demand_fulfillment=1.0, shared_across_all_levels_and_methods=True),
                       supply_assumptions=SUPPLY_ASSUMPTIONS)
     payloads = {"meta": meta, "validation": validation, "forecast": forecast,
-                "plan": dict(scenario_id="normal", levels=plans),
+                "plan": dict(scenario_id=scenario, levels=plans),
                 "risk_dial": dict(draws=len(draws.values), levels=risk,
                                   default_threshold=config.DEFAULT_P10_FULFILLMENT_THRESHOLD,
                                   recommended_level=recommend(risk)),
@@ -162,8 +191,9 @@ def build_candidate(destination, data_dir=None, output_dir=None, accepted_foreca
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--destination", type=Path, required=True)
+    parser.add_argument("--scenario", choices=config.SCENARIOS, default="normal")
     args = parser.parse_args()
-    print(f"Unactivated candidate written: {build_candidate(args.destination)}")
+    print(f"Unactivated candidate written: {build_candidate(args.destination, scenario=args.scenario)}")
 
 
 if __name__ == "__main__":

@@ -73,6 +73,32 @@ def test_export_round_trip_all_plans_and_common_draws(tmp_path, sources):
         build_candidate(tmp_path / "candidate", data, outputs, accepted)
 
 
+@pytest.mark.parametrize("scenario", ["scarce_supply", "expiry_trap"])
+def test_build_candidate_other_scenarios(tmp_path, sources, scenario):
+    data, outputs, accepted = sources
+    path = build_candidate(tmp_path / "candidate", data, outputs, accepted, scenario=scenario)
+    assert path.name == scenario
+    meta = json.loads((path / "meta.json").read_text())
+    plan = json.loads((path / "plan.json").read_text())
+    assert meta["scenario_id"] == scenario
+    assert plan["scenario_id"] == scenario
+    assert all(node["checker"]["passed"] for node in plan["levels"].values())
+    assert json.loads((path / "forecast.json").read_text()) == json.loads(accepted.read_text())
+
+
+def test_scarce_and_expiry_plant_expected_traps(tmp_path, sources):
+    data, outputs, accepted = sources
+    scarce = build_candidate(tmp_path / "scarce", data, outputs, accepted, scenario="scarce_supply")
+    expiry = build_candidate(tmp_path / "expiry", data, outputs, accepted, scenario="expiry_trap")
+    normal = build_candidate(tmp_path / "normal", data, outputs, accepted)
+    scarce_plan = json.loads((scarce / "plan.json").read_text())["levels"]["P50"]
+    expiry_plan = json.loads((expiry / "plan.json").read_text())["levels"]["P50"]
+    normal_plan = json.loads((normal / "plan.json").read_text())["levels"]["P50"]
+    assert scarce_plan["totals"]["unmet_units"] > 0
+    assert expiry_plan["blocked"]["shelf_life"] > normal_plan["blocked"]["shelf_life"]
+    assert expiry_plan["totals"]["freight"] > normal_plan["totals"]["freight"]
+
+
 def test_forecast_drift_rejected_without_output(tmp_path, sources):
     data, outputs, accepted = sources
     payload = json.loads(accepted.read_text())
@@ -81,6 +107,18 @@ def test_forecast_drift_rejected_without_output(tmp_path, sources):
     with pytest.raises(ValueError, match="disagree"):
         build_candidate(tmp_path / "candidate", data, outputs, accepted)
     assert not (tmp_path / "candidate").exists()
+
+
+def test_float_representation_drift_is_accepted_but_value_drift_is_not(tmp_path, sources):
+    data, outputs, accepted = sources
+    payload = json.loads(accepted.read_text())
+    payload["rows"][0]["p50"] += 1e-12
+    accepted.write_text(json.dumps(payload))
+    assert build_candidate(tmp_path / "tiny", data, outputs, accepted)
+    payload["rows"][0]["p50"] += 1e-6
+    accepted.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match="disagree"):
+        build_candidate(tmp_path / "drift", data, outputs, accepted)
 
 
 def test_hidden_truth_changes_scores_not_allocations(tmp_path, sources):

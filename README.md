@@ -3,18 +3,18 @@
 **Team Byte Works · Triwizathon 2026 · Problem Statement 2**
 
 Adaptive Distribution Intelligence Engine backend: completed Stream A forecasting,
-plus a Stream B/D normal candidate with supply validation, checked allocation,
-allocation baselines and simulated demand evaluation.
+plus Stream B/D candidates for all three supply scenarios with supply validation,
+checked allocation, allocation baselines and simulated demand evaluation.
 
 **All data is synthetic (seed 42). Results are not evidence of real-world
 performance. P90 is a planning quantile, not a 90% fulfillment guarantee.**
 
 ## Current status
 
-**Stream A complete; normal-scenario A → C forecast integration accepted.**
-The complete distribution planner is **not jointly accepted**: the normal B/D
-candidate is implemented and checked locally; frontend acceptance and full
-scarce/expiry exported runs remain pending.
+**Stream A complete; Normal A → C forecast and planner integration accepted.**
+Normal B/D is implemented, checked and activated in the frontend. Scarce Supply
+and Expiry Trap candidates are implemented, checked and packaged for frontend
+review; they are **not yet accepted or activated**.
 
 | Area | Status |
 |---|---|
@@ -25,8 +25,8 @@ scarce/expiry exported runs remain pending.
 | Six quantile forecasts and inventory-adjusted targets | Implemented |
 | Artifact audit, JSON adapter and frontend bridge | Implemented |
 | Normal forecast displayed in DistriSense | Accepted by Stream C |
-| Warehouse supply, routes, optimizer and independent checker | Implemented; normal candidate pending joint acceptance |
-| 200-draw Risk Dial and allocation comparisons | Implemented; normal candidate pending joint acceptance |
+| Warehouse supply, routes, optimizer and independent checker | Implemented; Normal accepted, scarce/expiry pending frontend acceptance |
+| 200-draw Risk Dial and allocation comparisons | Implemented; Normal accepted, scarce/expiry pending frontend acceptance |
 
 ### Verification record
 
@@ -38,10 +38,15 @@ scarce/expiry exported runs remain pending.
 - Stream C verified all 40 pairs against the supplied opening stock, all six
   quantile/target calculations, and actual forecast rendering. Its separate
   app suite passed **37 tests** at integration commit `04e338e`.
+- The accepted Normal candidate passed **162 backend tests** at `75b1a6c`; its
+  verifier rechecked 18 plans, shared draws, hashes and the Risk Dial.
+- The current scenario work passes **166 backend tests**. The scarce/expiry
+  verifier independently rechecks 18 plans per scenario, shared draws, hashes,
+  LP bounds and recommendations.
 
-These are separate backend and frontend runs, **not** one combined test suite or
-full-planner acceptance. Model selection is measured, not hardcoded: the baseline
-must be used if it scores better on another run.
+These are separate backend and frontend runs, **not** one combined test suite.
+Model selection is measured, not hardcoded: the baseline must be used if it
+scores better on another run.
 
 ## Configuration
 
@@ -77,6 +82,31 @@ python -m src.forecast_audit normal
 Repeat the engine and audit commands with `scarce_supply` or `expiry_trap` for
 the other scenarios. Generated source data is stored under `data/<scenario>/`
 and forecasting artifacts under `outputs/<scenario>/` (normally git-ignored).
+
+## Scenario candidate deliveries
+
+- `deliveries/normal-candidate/` — accepted and activated in the frontend.
+- `deliveries/scarce-expiry-candidates/` — complete checked candidates for
+  `scarce_supply` and `expiry_trap`, pending frontend acceptance.
+
+Each delivery freezes its source data, accepted forecast and verification inputs.
+Recheck the pending candidates from the repository root:
+
+```bash
+python deliveries/scarce-expiry-candidates/verify.py scarce_supply
+python deliveries/scarce-expiry-candidates/verify.py expiry_trap
+```
+
+Rebuild without fitting forecasts or overwriting accepted artifacts:
+
+```bash
+python -m src.planner --destination candidate_engine_results --scenario scarce_supply
+python -m src.planner --destination candidate_engine_results --scenario expiry_trap
+```
+
+The planner reads `data/<scenario>/` and `outputs/<scenario>/` by default. The
+pending delivery's `README.md` gives the exact self-contained command using its
+frozen inputs.
 
 ## Forecast contract
 
@@ -185,10 +215,10 @@ First normal candidate, using the accepted forecast and pinned dependencies:
 - Backend verification: **162 tests passed in 20.64 s**; this is not frontend
   verification or joint acceptance, and these synthetic results imply no real savings.
 
-Remaining: Stream C must validate/render the candidate and jointly accept normal.
-No frontend activation index is written. Scarce/expiry supplies have feasibility,
-blocked-rule and baseline-bound tests, but their full exported runs are deliberately
-deferred until normal acceptance. Keep demo artifacts and accepted forecast intact.
+Normal has been reviewed and activated in the frontend. Scarce/expiry candidates
+are complete and independently rechecked, but remain pending frontend review and
+acceptance; no activation index is written for them. Keep demo artifacts and the
+accepted Normal forecast intact.
 
 ## Remaining work and ownership
 
@@ -199,10 +229,10 @@ deferred until normal acceptance. Keep demo artifacts and accepted forecast inta
 | C | Streamlit app, saved-result display, verified-plan CSV export |
 | D | 200 seeded negative-binomial demand draws, Risk Dial, decision evaluation and comparisons |
 
-Next milestone: **one complete, verified normal scenario**, then the other two.
-Besides `forecast.json`, the frontend needs genuine `meta.json`,
-`validation.json`, `plan.json`, `risk_dial.json`, `baselines.json`, and
-`evaluation.json`. Follow the app repository's `CONTRACT.md` and
+Next milestone: **frontend acceptance of the scarce/expiry candidates**, then a
+final three-scenario demo. Besides `forecast.json`, the frontend needs genuine
+`meta.json`, `validation.json`, `plan.json`, `risk_dial.json`, `baselines.json`,
+and `evaluation.json`. Follow the app repository's `CONTRACT.md` and
 `engine_results/README.md` for their shapes and activation rules.
 
 Do **not** set `mock: false` and `integration_validated: true` in the app's engine

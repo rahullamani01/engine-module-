@@ -1,0 +1,17 @@
+{
+  "planning_week": 53,
+  "quantiles": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "latest_arrival_day": 2,
+  "min_shelf_life_days": 3,
+  "seed": 42,
+  "scenario": "scarce_supply",
+  "scenario_description": "Scarce Supply",
+  "synthetic": true
+}

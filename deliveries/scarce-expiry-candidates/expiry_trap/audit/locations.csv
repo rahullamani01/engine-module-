@@ -1,0 +1,12 @@
+location_id,type,region
+W01,warehouse,R1
+W02,warehouse,R2
+W03,warehouse,R1
+S01,store,R1
+S02,store,R1
+S03,store,R1
+S04,store,R1
+S05,store,R2
+S06,store,R2
+S07,store,R2
+S08,store,R2

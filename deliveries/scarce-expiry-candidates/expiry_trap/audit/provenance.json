@@ -1,0 +1,237 @@
+{
+  "backend_commit": "e94e05f19bea4c19a6f944c5675e0893ac374c58",
+  "working_tree_status": [],
+  "versions": {
+    "python": "3.14.8",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0"
+  },
+  "source_sha256": {
+    "/tmp/opencode/scenario-inputs/data/expiry_trap/locations.csv": "52e74656a77864dccfc17171d6a4e914833d47cc7eee2169da2a8fa973a735ca",
+    "/tmp/opencode/scenario-inputs/data/expiry_trap/products.csv": "01b53069da335d3ebf85a3dbbf134f80380bad7e5289a43fad430fab455c613a",
+    "/tmp/opencode/scenario-inputs/data/expiry_trap/opening_stock.csv": "2045636c9672687d22d3e31ec3689a2cdf15cb87e6d46d6ce448773cf06f992c",
+    "/tmp/opencode/scenario-inputs/outputs/expiry_trap/planning_forecast.csv": "4db3875794443c694aed1eace4e4a91e23a7f6be6d797a33adb36ecb1a16406d",
+    "/tmp/opencode/scenario-inputs/outputs/expiry_trap/model_comparison.csv": "0a6281c4d1c8c8e86a333a8b61250bf649c85f507c142de07bae59e03ea1a11e",
+    "/tmp/opencode/scenario-inputs/outputs/expiry_trap/selection.json": "cbf3459c8dd4734f9a9be673998532d8c17337e3d58c80bca1aa16edc1ff82fe",
+    "/tmp/opencode/scenario-inputs/outputs/expiry_trap/calibration.csv": "1d845f963526866e7289271a5e678e42c47e8a5e106e3656cea6182a0aa47161",
+    "/tmp/opencode/scenario-inputs/engine_results/expiry_trap/forecast.json": "f969efd5091e8629c46dee7da73eb276655594ebdf58ab1a632981984c679f1c",
+    "/tmp/opencode/scenario-inputs/data/expiry_trap/hidden_truth.csv": "56cb6a26875290f1010a60a0393b45d3efee71195f12b9dd227c3759f14a3563"
+  },
+  "code_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/allocation.py": "84fc3be737f7ece765c42c5cc2736d3f943b0630c4708c45174fe392e685efc9",
+    "src/baseline.py": "acdf926acc6b4ed76f067275fcbdbd44a2a50e1063440ecdb18ed3de39f9a5d1",
+    "src/config.py": "abe1af39ff4aa369416c6bc9e31062191220a54ea2948c2cf977b6db68f75fa2",
+    "src/data_generator.py": "0c821a4f2b4684cf618c984c4d516fb7527f3899a976b6052d932357c9870336",
+    "src/data_validation.py": "da0bd864eb8de004a168f2dde733ed704ee6d0760372793702758f10c44adf28",
+    "src/decision_evaluation.py": "552bdbdc444c87779636ace4b23c7a6e7e0562ce01211fe9122b9eb8c9a14c18",
+    "src/engine.py": "5009aa507d639d7cfd6156b17b0c813bd3852078fc3059a41eac53edbb7dff7a",
+    "src/evaluation.py": "4aed5c9f6176756da1a904753a2148959e9505e4c20ab19e7de858ce0a29ad99",
+    "src/features.py": "b6844736b0afb77da5f41835694fa8f29d43b584324519f2212586d25dd38eb9",
+    "src/forecast_adapter.py": "ee723a17bb8b04fc25e48936584a2646e1e67e6eee04a3272d12b6609dd1063e",
+    "src/forecast_audit.py": "a738b08a4c64a10889f8d92e15113b5c599c6653337ff252b50740e925749358",
+    "src/frontend_bridge.py": "ad42f8a3f7e9d8a96bd998176722813030ec391214ac026355a7b77082663d91",
+    "src/handoff.py": "5c5cfb89d1d1a907b5c9a7d6cbedb557f06c2d95022946388e3b4b30a25bfbe0",
+    "src/integration_reports.py": "a0d7fcd8475941b1b72206a91f2a64fb9f309cf26d49a6ceef6d2386824855ab",
+    "src/metrics.py": "bd764c836835e69be6ec0e3dbdc16053adfff7f75700f9e31d1424131c4f1e1d",
+    "src/plan_checker.py": "be76147a7dddb9ea244f3db163a62243830cf68c546952e229939010b2f348ee",
+    "src/planner.py": "950456390e31806b70f14ec9b1dc7aacf394505f617835505fc0aa7f42a51a42",
+    "src/quantile_model.py": "7562b78d2498e2161b585209e60ab279410a249dd1bfa502de0fb54f92808f60",
+    "src/schemas.py": "1a860c8e092d8757a5c82e75c2cf938bb414b015b3242e5d8d23d1db1b1a1a12",
+    "src/supply.py": "04db4f8d50bb611de110c72ab7837e2b9767fd104d60e88a83babb8fa8bbc69a",
+    "src/targets.py": "13c4e37f769d4a8395fac06460b2fb30230b05ff773263e70fcb266e9a7d479e"
+  },
+  "demand": {
+    "seed": 42,
+    "draws": 200,
+    "sha256": "a10206b5abd55635220df01f78bc8927d0ced96b3eaada699f748cec854e7697",
+    "pairs": [
+      [
+        "S01",
+        "K01"
+      ],
+      [
+        "S01",
+        "K02"
+      ],
+      [
+        "S01",
+        "K03"
+      ],
+      [
+        "S01",
+        "K04"
+      ],
+      [
+        "S01",
+        "K05"
+      ],
+      [
+        "S02",
+        "K01"
+      ],
+      [
+        "S02",
+        "K02"
+      ],
+      [
+        "S02",
+        "K03"
+      ],
+      [
+        "S02",
+        "K04"
+      ],
+      [
+        "S02",
+        "K05"
+      ],
+      [
+        "S03",
+        "K01"
+      ],
+      [
+        "S03",
+        "K02"
+      ],
+      [
+        "S03",
+        "K03"
+      ],
+      [
+        "S03",
+        "K04"
+      ],
+      [
+        "S03",
+        "K05"
+      ],
+      [
+        "S04",
+        "K01"
+      ],
+      [
+        "S04",
+        "K02"
+      ],
+      [
+        "S04",
+        "K03"
+      ],
+      [
+        "S04",
+        "K04"
+      ],
+      [
+        "S04",
+        "K05"
+      ],
+      [
+        "S05",
+        "K01"
+      ],
+      [
+        "S05",
+        "K02"
+      ],
+      [
+        "S05",
+        "K03"
+      ],
+      [
+        "S05",
+        "K04"
+      ],
+      [
+        "S05",
+        "K05"
+      ],
+      [
+        "S06",
+        "K01"
+      ],
+      [
+        "S06",
+        "K02"
+      ],
+      [
+        "S06",
+        "K03"
+      ],
+      [
+        "S06",
+        "K04"
+      ],
+      [
+        "S06",
+        "K05"
+      ],
+      [
+        "S07",
+        "K01"
+      ],
+      [
+        "S07",
+        "K02"
+      ],
+      [
+        "S07",
+        "K03"
+      ],
+      [
+        "S07",
+        "K04"
+      ],
+      [
+        "S07",
+        "K05"
+      ],
+      [
+        "S08",
+        "K01"
+      ],
+      [
+        "S08",
+        "K02"
+      ],
+      [
+        "S08",
+        "K03"
+      ],
+      [
+        "S08",
+        "K04"
+      ],
+      [
+        "S08",
+        "K05"
+      ]
+    ],
+    "distribution": "negative_binomial",
+    "dispersion": "size k",
+    "zero_demand_fulfillment": 1.0,
+    "shared_across_all_levels_and_methods": true
+  },
+  "supply_assumptions": {
+    "version": 1,
+    "seed": 42,
+    "batches_per_warehouse_sku": 2,
+    "units_per_batch": {
+      "normal": 160,
+      "scarce_supply": 35,
+      "expiry_trap": 160
+    },
+    "route_capacity": {
+      "normal": 1000,
+      "scarce_supply": 120,
+      "expiry_trap": 1000
+    },
+    "costs": "seeded integer 1..6; expiry_trap W01 costs 1",
+    "traps": "W01-S01 inactive; W02-S02 lead 3; W01-K01-B1 expires day 2",
+    "expiry_trap": "all W01 batches expire day 2",
+    "expiry": "other batches use product shelf life plus batch offset (0 or 1 day)",
+    "blocked_counts": "first failure: route (including absent), lead_time, shelf_life"
+  }
+}

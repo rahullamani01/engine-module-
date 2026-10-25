@@ -1,0 +1,57 @@
+{
+  "holdout": {
+    "method": "MA4",
+    "fit_weeks": [
+      5,
+      40
+    ],
+    "window": 4,
+    "quantiles": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "min_series_residuals": 20,
+    "n_series": 40,
+    "n_series_using_pooled_residuals": 0,
+    "residuals_per_series_min": 36,
+    "residuals_per_series_max": 36,
+    "residual_quantile_method": "numpy linear interpolation",
+    "eval_weeks": [
+      41,
+      52
+    ]
+  },
+  "holdout_summary": {
+    "n_observations": 480,
+    "mean_pinball_loss": 4.9338975694444445,
+    "wape_p50": 0.27638718155228686
+  },
+  "final_fit": {
+    "method": "MA4",
+    "fit_weeks": [
+      5,
+      52
+    ],
+    "window": 4,
+    "quantiles": [
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "min_series_residuals": 20,
+    "n_series": 40,
+    "n_series_using_pooled_residuals": 0,
+    "residuals_per_series_min": 48,
+    "residuals_per_series_max": 48,
+    "residual_quantile_method": "numpy linear interpolation"
+  },
+  "seed": 42,
+  "synthetic_data": true
+}
