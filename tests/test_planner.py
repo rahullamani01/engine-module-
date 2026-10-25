@@ -109,6 +109,18 @@ def test_forecast_drift_rejected_without_output(tmp_path, sources):
     assert not (tmp_path / "candidate").exists()
 
 
+def test_float_representation_drift_is_accepted_but_value_drift_is_not(tmp_path, sources):
+    data, outputs, accepted = sources
+    payload = json.loads(accepted.read_text())
+    payload["rows"][0]["p50"] += 1e-12
+    accepted.write_text(json.dumps(payload))
+    assert build_candidate(tmp_path / "tiny", data, outputs, accepted)
+    payload["rows"][0]["p50"] += 1e-6
+    accepted.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match="disagree"):
+        build_candidate(tmp_path / "drift", data, outputs, accepted)
+
+
 def test_hidden_truth_changes_scores_not_allocations(tmp_path, sources):
     data, outputs, accepted = sources
     a = build_candidate(tmp_path / "first", data, outputs, accepted)

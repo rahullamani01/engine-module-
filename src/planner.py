@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import platform
 import subprocess
@@ -28,6 +29,28 @@ from src.supply import SUPPLY_ASSUMPTIONS, generate_supply, planning_date, valid
 def _save(path, payload):
     with path.open("x", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, allow_nan=False)
+
+
+def _forecasts_agree(saved, recomputed):
+    """Compare semantics, not float repr: CSV parsing can move a value by 1 ulp."""
+    if saved.keys() != recomputed.keys():
+        return False
+    left, right = saved["rows"], recomputed["rows"]
+    if len(left) != len(right):
+        return False
+    for a, b in zip(left, right):
+        if a.keys() != b.keys():
+            return False
+        if (a["store_id"], a["sku_id"], a["opening_units"]) != (
+                b["store_id"], b["sku_id"], b["opening_units"]):
+            return False
+        for level in config.QUANTILE_COLUMNS:
+            key = level.lower()
+            if not math.isclose(a[key], b[key], rel_tol=1e-12, abs_tol=1e-9):
+                return False
+            if a[f"target_{key}"] != b[f"target_{key}"]:
+                return False
+    return True
 
 
 SCENARIO_NAMES = {"normal": "Normal", "scarce_supply": "Scarce Supply", "expiry_trap": "Expiry Trap"}
@@ -52,7 +75,7 @@ def build_candidate(destination, data_dir=None, output_dir=None, accepted_foreca
     # The existing adapter validates forecast quantiles, planning week, pairs,
     # opening stock and every target. Reject dependency/artifact drift.
     recomputed = build_forecast_json(pd.read_csv(outputs / "planning_forecast.csv"), stock)
-    if forecast != recomputed:
+    if not _forecasts_agree(forecast, recomputed):
         raise ValueError("Saved forecasts/stock disagree with accepted forecast; coordinate rerun, do not overwrite")
     supply = generate_supply(locations, products, stock, scenario)
     report = validate_supply(supply, locations, products)
